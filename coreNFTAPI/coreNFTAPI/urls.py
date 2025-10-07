@@ -27,6 +27,7 @@ from drf_yasg import openapi
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', include('website.urls')),
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATICFILES_DIRS[0])
